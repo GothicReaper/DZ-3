@@ -1,37 +1,37 @@
-{
-    маржа :  0 ;
-    отступ :  0 ;
-    размер коробки : рамка-рамка;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-    высота :  60 В.Х. ;
-    дисплей : гибкий;
-    align-items : center;
-    justify-content : center;
-    семейство шрифтов : Verdana , без засечек;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, sans-serif;
 }
 form {
-    дисплей : гибкий;
-    flex-direction : столбец;
-    ширина :  400 пикселей ;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
 }
 input {
-    поле :  6 пикселей  0 ;
-    отступ :  6 пикселей ;
-    граница : не задана;
-    нижняя граница :  сплошная 2 пикселя # e3e3e3 ;
-    наброски : нет;
+    margin: 6px 0;
+    padding: 6px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
 }
 button {
-    отступ :  6 пикселей ;
-    фон :  # e3e3e3 ;
-    граница : не задана;
-    радиус границы :  9 пикселей ;
-    курсор : указатель;
+    padding: 6px;
+    background: #e3e3e3;
+    border: unset;
+    border-radius: 9px;
+    cursor: pointer;
 }
-. msg {
-    поле :  2 пикселя  0 ;
-    граница :  сплошная 2 пикселя # e3e3e3 ;
-    радиус границы :  9 пикселей ;
-    отступ :  6 пикселей ;
+.msg {
+    margin: 2px 0;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 6px;
 }
