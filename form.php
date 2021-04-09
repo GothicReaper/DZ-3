@@ -1,46 +1,46 @@
 <? php
     session_start ();
-    $ firstname = $ _POST [ 'имя' ];
-    $ lastname = $ _POST [ 'фамилия' ];
-    $ login = $ _POST [ 'логин' ];
-    $ пароль = $ _POST [ 'пароль' ];
+    $ firstname = $ _POST [ 'Name' ];
+    $ lastname = $ _POST [ 'Surname' ];
+    $ login = $ _POST [ 'Login' ];
+    $ пароль = $ _POST [ 'Password' ];
     $ array = [];
     if ( preg_match ( "/ ^ [а-яА-Яa-zA-Z] + $ / u" , $ firstname )) {
         $ a = 1 ;
     } else {
         $ a = [];
-        $ array [] = 'Имя не должно содержать цифр' ;
+        $ array [] = 'The name must not contain numbers' ;
     }
     if ( preg_match ( "/ ^ [а-яА-Яa-zA-Z] + $ / u" , $ lastname )) {
         $ b = 1 ;
     } else {
         $ b = [];
-        $ array [] = 'Фамилия не должна содержать цифр' ;
+        $ array [] = 'Last name must not contain numbers' ;
     }
-    if ( strlen ( $ login )> 3 ) {
+    if ( strlen ( $ login )> 4 ) {
         $ c = 1 ;
     } else {
         $ c = [];
-        $ array [] = 'Логин должен быть больше 3 символов' ;
+        $ array [] = 'Login must be more than 4 characters' ;
     }
-    if ( strlen ( $ password )> 4 ) {
+    if ( strlen ( $ password )> 5 ) {
         $ d = 1 ;
     } else {
         $ d = [];
-        $ array [] = 'Пароль должен быть больше 4 символов' ;
+        $ array [] = 'Password must be more than 5 characters' ;
     }
     if ( empty ( $ firstname ) || empty ( $ lastname ) || empty ( $ login ) || empty ( $ password )) {
         $ array = [];
     }
     if (! empty ( $ a ) &&! empty ( $ b ) &&! empty ( $ c ) &&! empty ( $ d )) {
         $ _SESSION [ 'message' ] = "
-                        Вы успешно прошли валидацию <br> 
-                        Ваше имя: $ firstname <br> 
-                        Ваша фамилия: $ lastname <br>
-                        Ваш логин: $ логин <br>
-                        Ваш пароль: $ пароль " ;
+                        You have successfully passed the validation <br> 
+                        Your Name: $ firstname <br> 
+                        Your Surname: $ lastname <br>
+                        Your Login: $ логин <br>
+                        Your Password: $ пароль " ;
     } else {
-        $ _SESSION [ 'сообщение' ] = implode ( '<br>' , $ array );
+        $ _SESSION [ 'massange' ] = implode ( '<br>' , $ array );
     }
     $ array = [];
     $ _POST = [];
