@@ -2,12 +2,12 @@
 <? php  require_once  "form.php"  ?>
 <! doctype html >
 < html  lang = " ru " >
-< голова >
+<head>
     < meta  charset = " UTF-8 " >
     < title > Home Work 3 </ title >
     < link  rel = " stylesheet " href = " main.css " >
-</ голова >
-< тело >
+</head>
+<body>
     < form  action = " ./ " method = " post " >
         < label > Name </ label >
         < input  type = " text " name = " firstname " placeholder = " Enter your name " >
@@ -24,6 +24,6 @@
         }
         unset ( $ _SESSION [ 'message' ]);
         ?>
-    </ форма >
+    </form >
 </ body >
 </ html >
